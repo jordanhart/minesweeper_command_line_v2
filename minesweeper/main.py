@@ -47,7 +47,7 @@ def fill_board(board_length, board_width, num_mines):
 def get_num_mines_nearby(board, s, length):
     if (s % length == 0): #at beginning column of board
         nearby = [s+1, s + length, s + length + 1, s - length, s - length + 1]
-    elif (s % length - 1 == 0): #at ending column of board
+    elif (s % (length - 1) == 0): #at ending column of board
         nearby = [s-1, s + length, s+length - 1, s - length, s - length - 1]
     else: #inbetween
         nearby = [s - 1, s + 1, s + length, s - length, s + length + 1, s + length - 1, s - length - 1, s - length + 1]
